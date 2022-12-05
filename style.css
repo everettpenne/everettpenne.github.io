@@ -1,0 +1,119 @@
+/* CSS HEX */
+/*    --cafe-noir: #46351dff;
+--dark-olive-green: #646f4bff;
+--morning-blue: #839d9aff;
+--aero: #7bb2d9ff;
+--cambridge-blue: #bfd2bfff; */
+
+* {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --mybrown: #3c2317;
+    --mygreen: #628e90;
+    --myblue: #b4cde6;
+    --mywhite: #f5efe6;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    Padding: 10px,10px;
+}
+
+  img-prof {
+    width: 300px;
+    height: 400px;
+  }
+  
+  body {
+    font-family: Arial;
+    padding: 20px;
+    background: var(--mygreen); /*#f1f1f1;*/
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 0px;
+    font-size: 30px;
+    text-align: center;
+    background: var(--myblue);
+    border-style: solid;
+    border-color: var(--mybrown);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* Create two unequal columns that floats next to each other */
+  /* Left column */
+  .leftcolumn {
+    float: left;
+    width: 75%;
+  }
+  
+  /* Right column */
+  .rightcolumn {
+    float: left;
+    width: 25%;
+    padding-left: 20px;
+  }
+  
+  /* Fake image */
+  .fakeimg {
+    background-color: #aaa;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: var(--mywhite);
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .about-me {
+    background-color: var(--mywhite);
+    display: block;
+    min-height: 500px;
+    height: auto;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--myblue);
+    margin-top: 20px;
+    border-style: solid;
+    border-color: var(--mybrown);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .caption{
+    text-align: center
+  }
+
+  #rightalign  {
+    float: left;    
+     margin: 0 15px 0 0;
+    }
+  
+  /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
