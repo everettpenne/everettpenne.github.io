@@ -7,7 +7,7 @@
   <h5 class="pal">Engineer-in-Training</h5>
 </div>
 
-<div class="row">
+<div class="fbox">
   <div class="leftcolumn">
     <div class="about-me">
       <div style="float:left; padding:20px;">
@@ -30,7 +30,6 @@
         </p>
     </div>
   </div>
-
   <div class="rightcolumn">
     <div class="card" style="min-height:500px; height:auto;">
       <h3 class="pal">Popular Post</h3>
@@ -40,17 +39,53 @@
     </div>
   </div>
 </div>
+<div class="fbox">
+  <div class="leftcolumn">
+    <div class="cambox">
+      <h2 class="pal" style="float:left; padding:-10px">Coffee Cam</h2>
+      <img id="cam" alt="camera livestream" src="img/ccam/offline/offline.jpeg" style="padding:0px">
+      <p class="pal">Live view of my coffee pot.</p>
+      </div>
+      <script>
+        const date = new Date();
+        let index=0;
+        let hours=0;
+        let minutes=0;
+        let seconds=0;
+        let secondsSinceHour=0;
+
+        function checkTime()  {
+          hour = date.getHours();
+          minutes = date.getMinutes();
+          seconds = date.getSeconds();
+          secondsSinceHour = minutes * 60 + seconds;
+        }
+
+        function loadImage(scene, i){
+          document.getElementById("cam").src = "img/ccam/brew-cycle-0" + String(scene) + "/brewing-" + String(i) + ".jpeg";
+        }
+
+        function coffeeCam() {
+          checkTime();
+          index = index + 1;
+          if ((hours > 7) && (hours < 23))  {
+            if (index > 1571) {index = 1571;}
+            loadImage(1,index);
+          } else if (hours = 23)  {
+            if(index > 1118)  {index = 1118;}
+            loadImage(2,index);
+          } else {
+            document.getElementById("cam").src = "img/ccam/offline/offline.jpeg";
+          }
+          setTimeout(coffeeCam, 2000);
+        }
+
+        window.onload = coffeeCam();
+      </script>
+    </div>
+  </div>
+</div>
 
 <div class="footer">
   <h2>Footer</h2>
 </div> 
-  
-
-<!--<div class="card">
-  <h2>TITLE HEADING</h2>
-  <h5>Title description, Sep 2, 2017</h5>
-  <img src="img/pennee-porcupine-mountains.jpeg" alt="Everett Penne in the Porkies" width="300" height="400" id="rightalign">
-  <p>
-    Some text..
-  </p>
-</div> -->

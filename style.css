@@ -18,6 +18,7 @@
 
   h2.pal{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
   h3.pal{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
+  h4.pal{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
   h5.pal{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
   p.pal{font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif }
 
@@ -87,12 +88,24 @@
     margin-top: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
+
+  .cambox {
+    padding: 30px;
+    text-align: center;
+    background: var(--mywhite);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
   
   /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
+  }
+
+  .fbox {
+    display: flex;
+    flex-direction:row;
   }
   
   /* Footer */
