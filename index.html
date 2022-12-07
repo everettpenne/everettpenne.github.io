@@ -76,10 +76,10 @@
           checkTime();
           index = index + 1;
           if ((hours > 7) && (hours < 23))  {
-            if (index > 1571) {index = 1571;}
+            if (index > 1000) {index = 1000;}
             loadImage(1,index);
           } else if (hours = 23)  {
-            if(index > 1118)  {index = 1118;}
+            if(index > 1000)  {index = 1000;}
             loadImage(2,index);
           } else {
             document.getElementById("cam").src = "img/ccam/offline/offline.jpeg";
